@@ -4,7 +4,7 @@
     "name": "Banana",
     "desc": "Banana que veio da terra",
     "value": "100.00",
-    "image": "image-banana-terra.png",
+    "image": "../../src/assets/image-banana-terra.png",
     "category": "comida",
     "status": true
   },
@@ -13,7 +13,7 @@
     "name": "Banana",
     "desc": "Banana que é prata",
     "value": "2200.00",
-    "image": "image-banana-prata.png",
+    "image": "../../src/assets/image-banana-prata.png",
     "category": "comida",
     "status": true
   },
@@ -22,7 +22,7 @@
     "name": "Banana",
     "desc": "Banana que é muito pequena",
     "value": "2200.00",
-    "image": "image-banana-nanica.png",
+    "image": "../../src/assets/image-banana-nanica.png",
     "category": "comida",
     "status": true
   },
@@ -31,7 +31,7 @@
     "name": "Banana",
     "desc": "Banana jovem demais",
     "value": "2200.00",
-    "image": "image-banana-baby.png",
+    "image": "../../src/assets/image-banana-baby.png",
     "category": "comida",
     "status": true
   },
@@ -40,7 +40,7 @@
     "name": "Banana",
     "desc": "Banana",
     "value": "2200.00",
-    "image": "image-banana-banana.png",
+    "image": "../../src/assets/image-banana-banana.png",
     "category": "comida",
     "status": true
   }
