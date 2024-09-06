@@ -1,4 +1,4 @@
-import style from '../components/cardapi.module.css';
+import style from './cardapi.module.css';
 
 
 // eslint-disable-next-line react/prop-types

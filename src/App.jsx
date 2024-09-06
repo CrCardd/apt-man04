@@ -7,6 +7,17 @@ import produtos from './constants/produtos.json'
 import { api } from "./api/rmApi"
 import style from './App.module.css'
 
+import { Link } from "react-router-dom";
+
+
+
+
+
+
+
+
+
+
 function App() {
   const [show, setShow] = useState("")
   const [data, setData] = useState([])
@@ -37,6 +48,7 @@ function App() {
       <button onClick={() => setShow("prod")}>Produtos</button>
       <button onClick={() => setShow("api")}>API</button>
       <button onClick={() => setShow("map")}>Mapa</button>
+      <Link to={`/Graph`}>GRAFICO</Link>
     </div>
     <div  className={style.wrapPage}>
       <h1>Exercícios de manutenção</h1>
