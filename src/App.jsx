@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { CardProd } from './components/CardProd'
 import { CardApi } from './components/CardApi'
 import { Alert } from './components/Found'
+import { Map } from './components/Map'
 import produtos from './constants/produtos.json'
 import { api } from "./api/rmApi"
 import style from './App.module.css'
@@ -75,7 +76,7 @@ function App() {
         <>
       <h2>Mapa</h2>
           <div>
-              mapa aqui
+              <Map/>
           </div>
          </>
       }
