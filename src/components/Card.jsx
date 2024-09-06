@@ -1,6 +1,7 @@
 import style from '../components/card.module.css';
 
 
+// eslint-disable-next-line react/prop-types
 export const Card = ({name,desc,value,image,status}) => {
   return(
       <div className={style.card}>
