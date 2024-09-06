@@ -23,7 +23,7 @@ export const Map =() =>{
         />
         <Marker position={position}>
           <Popup>
-            A pretty CSS3 popup. <br /> Easily customizable.
+            Senai Celso Charuri. <br /> Aulão do professor André.
           </Popup>
         </Marker>
       </MapContainer>
