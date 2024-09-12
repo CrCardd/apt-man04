@@ -3,9 +3,9 @@ import { CardApi } from './components/CardApi'
 import { Alert } from './components/Found'
 import { api } from "./api/rmApi"
 import style from './App.module.css'
-
+import {Modal} from './components/Modal'
 import { Link } from "react-router-dom";
-
+import { Tilt } from 'react-tilt'
 
 
 
@@ -20,6 +20,8 @@ function ApiPage() {
   const [page, setPage] = useState("")
   const [name, setName] = useState("")
   const [found, setFound] = useState("")
+
+  const [modal, setModal] = useState();
 
 
   useEffect(() => {
@@ -45,6 +47,8 @@ function ApiPage() {
 
   return (
     <>
+    {modal !== undefined && <Modal data={data[modal]} close={() => setModal()}/>}
+
     <div className={style.wrapBtns}>
     <Link to={`/ProductsPage`} className={style.link}>Products</Link>
       <Link to={`/ApiPage`} className={style.link}>Api</Link>
@@ -63,15 +67,16 @@ function ApiPage() {
             <div>
                <input type="text" placeholder="1/43" value={page} onChange={(event) => setPage(event.target.value)}/>
                <input type="text" placeholder="character name" value={name} onChange={(event) => setName(event.target.value)}/>
-               { found ? <Alert message={'acho'} color={'green'}/> : <Alert message={'Não encontrado'} color={'red'}/>}
+               { found ? <Alert message={'Encontrado'} color={'green'}/> : <Alert message={'Não encontrado'} color={'red'}/>}
             </div>
             <div className={style.card_deck}>
-            {data.map((item) => { 
+            {data.map((item, index) => { 
              return(
-              <div key={item.id}>
-                <CardApi name={item.name} status={item.status == "Alive" ? true : false} species={item.species} type={item.type} gender={item.gender} image={item.image} />
-                {/*<button onClick={() => }></button>*/}
-              </div>
+              <Tilt key={item.id}>
+                <div onClick={() => setModal(index)}>
+                  <CardApi name={item.name} status={item.status} species={item.species} type={item.type} gender={item.gender} image={item.image} /> 
+                </div>
+              </Tilt>
               )
            })}
             </div>

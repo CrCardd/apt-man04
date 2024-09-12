@@ -1,24 +1,21 @@
-.true {
-    background-color: green;
-}
-
-.false {
-    background-color: red;
-}
-
-.true, .false {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-}
-
-.Card {
+.Modal {
     background-color: rgb(119, 119, 119);
+    position: fixed;
+    left: 42%;
+    top: 30%;
+    z-index: 2;
+    border: 2px solid yellow;
+
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
-    width: 300px;
+
+    button {
+        align-self: flex-end;
+        position: absolute;
+        background-color: transparent;
+        width: 10px;
+    }
 
 }
 
