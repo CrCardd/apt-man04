@@ -1,5 +1,10 @@
 import App from './App.jsx'
-import Graph from './Graph.jsx'
+import GraphPage from './GraphPage.jsx'
+import ProductsPage from './ProductsPage.jsx'
+import ApiPage from './ApiPage.jsx'
+import MapPage from './MapPage.jsx'
+
+
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
 import {
@@ -14,8 +19,20 @@ const router = createBrowserRouter([
     element: <App/>
   },
   {
-    path: "/Graph",
-    element: <Graph/>
+    path: "/GraphPage",
+    element: <GraphPage/>
+  },
+  {
+    path: "/ProductsPage",
+    element: <ProductsPage/>
+  },
+  {
+    path: "/ApiPage",
+    element: <ApiPage/>
+  },
+  {
+    path: "/MapPage",
+    element: <MapPage/>
   },
 ]);
 
